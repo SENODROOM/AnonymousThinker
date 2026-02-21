@@ -4,3 +4,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/SENODROOM/AnnoymousThinker-Backend.git
+[submodule "guide"]
+	path = guide
+	url = https://github.com/SENODROOM/AI-and-LLM-Guide.git
