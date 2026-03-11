@@ -106,7 +106,7 @@ To ensure the AI prioritizes Islamic logical proofs:
 ## 📖 Learning Guide
 
 New to AI or this project’s architecture? Start with the step-by-step guide:
-- [Part 1 — Introduction to AI](01%20Introduction%20to%20AI.md)
+- [AI and LLM Guide](https://github.com/SENODROOM/AI-and-LLM-Guide)
 - The full guide continues through advanced topics like RAG, security, testing, and production scaling.
 
 ---
