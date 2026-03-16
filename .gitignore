@@ -5,3 +5,9 @@ node_modules/
 build/
 dist/
 *.log
+
+
+/.txtignore
+/.txtconfig
+/AnnonymousThinker.txt
+/AnnonymousThinker.txt

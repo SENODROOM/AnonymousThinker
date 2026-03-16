@@ -1,8 +1,29 @@
-# AnonymousThinker 🧠
+# AnonymousThinker 🧠 — v2.1
 
 AnonymousThinker is a premium AI reasoning platform designed to provide structured, logical responses with a specialized focus on defending and explaining Islamic principles through reason and scholarly knowledge.
 
-## ✨ Key Features
+---
+
+## ✨ What's New in v2.1
+
+### 🆕 Feature Upgrades
+
+| Feature | Description |
+|---|---|
+| **📌 Pin Conversations** | Pin important conversations to the top of the sidebar |
+| **🗄️ Archive Conversations** | Archive chats instead of deleting them (right-click menu) |
+| **🔍 Sidebar Search** | Search conversations by title or content |
+| **👍👎 Message Reactions** | Rate AI responses as helpful or not helpful |
+| **📤 Export Conversation** | Download full conversation as a Markdown file |
+| **📊 Word Count** | AI responses show word count for quick reference |
+| **🔢 Character Counter** | Live character count in input (max 4000 chars) |
+| **🖱️ Right-Click Context Menu** | Right-click any conversation for rename, pin, archive, export, delete |
+| **📊 Response Counter** | Topbar shows number of AI responses in current chat |
+| **🚀 Improved Error Toast** | Cleaner error display, auto-dismisses after 5s |
+
+---
+
+## ✨ All Features
 
 - **Dual-Model Comparative Analysis**: Compare responses from a personal logic model (Llama 3.1 8B) and a powerful reasoning model (DeepSeek-R1-70B) side-by-side.
 - **Sovereign AI Hub**: A centralized command center for administrators to define the AI's persona, logical framework, and core strategy.
@@ -25,8 +46,6 @@ AnonymousThinker is a premium AI reasoning platform designed to provide structur
 
 ## 🚀 Local Setup Guide
 
-Follow these steps to get the project running on your local machine.
-
 ### 1. Prerequisites
 - **Node.js** (v18+)
 - **npm** or **yarn**
@@ -39,77 +58,75 @@ cd AnonymousThinker
 ```
 
 ### 3. Backend Setup
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure Environment Variables:
-   - Copy `.env.example` to `.env`:
-     ```bash
-     cp .env.example .env
-     ```
-   - Open `.env` and add your `MONGODB_URI`, `JWT_SECRET`, `GROQ_API_KEY`, and `HUGGINGFACE_API_KEY`.
-
-4. Start the server (Development mode):
-   ```bash
-   npm run dev
-   ```
+```bash
+cd backend
+npm install
+cp .env.example .env
+# Edit .env with your credentials
+npm run dev
+```
 
 ### 4. Frontend Setup
-1. Navigate to the frontend directory:
-   ```bash
-   cd ../frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the application:
-   ```bash
-   npm start
-   ```
+```bash
+cd ../frontend
+npm install
+npm start
+```
 
 ---
 
 ## 🛡️ Administrative Configuration
 
 ### Promoting Your Account to Admin
-To access the "Train AI" command center, you must promote your account.
-
-1. Register an account through the UI.
-2. In the `backend/scripts` folder, run:
-   ```bash
-   node makeAdmin.js your-email@example.com
-   ```
-   *Note: Ensure your backend server is stopped or you have configured `.env` correctly for the script.*
+```bash
+node scripts/makeAdmin.js your-email@example.com
+```
 
 ### Default Admin Login
-If you configured `ADMIN_EMAIL` and `ADMIN_PASSWORD` in your `.env`, you can login directly with those credentials to auto-promote your session.
+Configure `ADMIN_EMAIL` and `ADMIN_PASSWORD` in your `.env`.
+
+---
+
+## 🖱️ New UX: Right-Click Context Menu
+
+Right-click any conversation in the sidebar to access:
+- **Rename** — Edit the conversation title inline
+- **Pin to top** / **Unpin** — Keep important conversations accessible
+- **Export as .md** — Download the full conversation as a Markdown file
+- **Archive** — Hide the conversation without deleting it
+- **Delete** — Permanently remove the conversation
+
+---
+
+## 👍👎 Message Reactions
+
+Each AI response now shows thumbs up/down buttons. Click to rate:
+- **👍 Helpful** — Marks the response as useful
+- **👎 Not helpful** — Marks the response as needing improvement
+
+Reactions are stored per-message in the database and can be used to track AI quality over time.
+
+---
+
+## 🔍 Conversation Search
+
+Click the search icon (🔍) in the sidebar header to activate search. Type to filter conversations by:
+- Conversation title
+- Last message preview
 
 ---
 
 ## 📚 Global Knowledge Training
 
-To ensure the AI prioritizes Islamic logical proofs:
-1. Login as an Admin.
-2. Click **"Train AI"** in the sidebar.
-3. Use the **Upload Zone** to ingest PDFs of scholarly Islamic works.
-4. Update the **"Core Logic & Strategy"** textarea to define how the AI should refute specific claims.
-5. Click **"Commit Changes to Core"** to synchronize the AI's logic globally.
-
----
-
-## 📖 Learning Guide
-
-New to AI or this project’s architecture? Start with the step-by-step guide:
-- [AI and LLM Guide](https://github.com/SENODROOM/AI-and-LLM-Guide)
-- The full guide continues through advanced topics like RAG, security, testing, and production scaling.
+1. Login as Admin
+2. Click **"Train AI"** in the sidebar
+3. Upload PDFs in the **Upload Zone**
+4. Update the **"Core Logic & Strategy"** textarea
+5. Click **"Commit Changes to Core"**
 
 ---
 
 ## 📜 License
 MIT License - Developed for Sovereign Thought Analysis.
+
+> *"I am AnonymousThinker, an AI to understand different thoughts and to create a conclusion from them."*
