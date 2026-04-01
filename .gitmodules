@@ -9,4 +9,4 @@
 	url = https://github.com/SENODROOM/AI-and-LLM-Guide.git
 [submodule "books"]
 	path = books
-	url = https://github.com/SENODROOM/Comparative-Religion-Books.git
+	url = https://github.com/SENODROOM/ComparativeReligionBooks.git
